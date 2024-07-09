@@ -64,7 +64,7 @@ def main() -> None:
     config = load_config(config_file)
 
     currency_pair = "BTCUSDT"  # Example currency pair
-    target_date_str = "2023-08-13"  # Example target date
+    target_date_str = "2023-12-21"  # Example target date
     data_folder = f"./data/{currency_pair}/{target_date_str}"
     master_csv = f"{data_folder}/master_data.csv"
 
@@ -73,3 +73,7 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
+    # TODO: Visualize these across the entire period. To do so you'll need to:
+    # 1. Download data across the whole time period
+    # 2. Be able to insert event markers across the whole thing
