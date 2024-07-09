@@ -1,7 +1,7 @@
 # README
 
-## Data
-
+## klines schema
+```
 [
   [
     1591258320000,          // Open time
@@ -18,3 +18,4 @@
     "0"                     // Ignore.
   ]
 ]
+```
