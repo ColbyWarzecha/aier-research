@@ -43,7 +43,7 @@ def visualize_data(master_csv: str, notable_events: dict, currency_pair: dict) -
         victory_time = pd.to_datetime(date_str).tz_convert('UTC')
         if data["Open Time"].min() <= victory_time <= data["Open Time"].max():
             plt.axvline(x=victory_time, color='purple', linestyle='--', label=description)
-            plt.text(victory_time, data["Open"].max() * 0.9, description, rotation=0, verticalalignment='bottom', color='purple')
+            plt.text(victory_time, data["Open"].max() * 0.9, description, rotation=30, verticalalignment='bottom', color='purple')
     
     plt.title(f"{currency_pair}")
     plt.xlabel("Time")

@@ -6,7 +6,3 @@ notable_events:
   "2023-08-13 23:00:00-03:00": "Primary election victory for Javier Milei"
   "2023-10-22 21:00:00-03:00": "General election victory"
   "2023-12-21 15:30:00-03:00": "Finance minister's tweet about Bitcoin approval"
-
-# notable_events:
-  # TODO: add these in UTC time. Include US market open. Perhaps Argentina markets? 
-  # Perhaps other big distortions in the markets during these times?
