@@ -125,3 +125,5 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
+# TODO: Look up if the markets were reflecting data as it came in for: https://www.electoral.gob.ar/nuevo/index.php 

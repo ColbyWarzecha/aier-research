@@ -2,12 +2,16 @@
 
 Macnoob start
 ```
-python -m pip install virtualenv
+pip install virtualenv
 pip install venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 python -m [script]
 ```
+
+## Data Sources
+
+[SPY/SPX Data](https://firstratedata.com/free-intraday-data)
 
 ## klines schema
 ```
@@ -28,3 +32,5 @@ python -m [script]
   ]
 ]
 ```
+
+TODO: Add [TabbyML](https://github.com/TabbyML/tabby?tab=readme-ov-file) to this computer and use it instead of github copilot.
