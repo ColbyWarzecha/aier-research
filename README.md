@@ -1,10 +1,11 @@
 # README
 
 Example Run
-python -m visualize --currency BTCUSDT
+python -m src.visualize --currency USDCHF --start 2023-08-10 --end 2023-08-16
 
 Macnoob setup
-```
+
+``` bash
 pip install virtualenv
 pip install venv venv
 source venv/bin/activate
@@ -19,7 +20,8 @@ python -m [script]«
 [BTC/ARS & BTC/USDT](https://data.binance.vision/?prefix=data/spot/daily/klines/)
 
 klines schema for BTC/ARS & BTC/USDT
-```
+
+``` text
 [
   [
     1591258320000,          // Open time

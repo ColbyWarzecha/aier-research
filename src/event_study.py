@@ -1,7 +1,16 @@
 import pandas as pd
 from sklearn.linear_model import LinearRegression
 import matplotlib.pyplot as plt
-from typing import List, Tuple
+from typing import Tuple
+
+# TODO: Try out the eventstudy module: https://lemairejean-baptiste.github.io/eventstudy/get_started.html
+# or here: https://github.com/zrxbeijing/EventStudy/blob/master/EventStudy/return_calculator.py
+
+# Where I'm stuck: The below script is running (and crashing) in memory. How to fix...
+# I think I need to 1) write estimates to a csv file so that this isn't all run in memory and 
+# therefore 2) refactor the below code.
+
+# I'll also need to load the USD/CHF data instead of SPY, since BTC is more like a currency than a SPY.
 
 def load_data(token_file: str, sp500_file: str) -> Tuple[pd.DataFrame, pd.DataFrame]:
     """Load token and S&P 500 data."""
