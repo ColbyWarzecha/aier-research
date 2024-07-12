@@ -48,6 +48,6 @@ def perform_regression(master_csv: str):
 
 # Usage
 currency = "BTCUSDT"
-date = "2023-08-13"
+date = "2023-10-22"
 master_csv = f"./data/{currency}/{date}/master_data.csv"
 perform_regression(master_csv)

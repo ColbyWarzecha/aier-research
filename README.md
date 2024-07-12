@@ -1,19 +1,24 @@
 # README
 
-Macnoob start
+Example Run
+python -m visualize --currency BTCUSDT
+
+Macnoob setup
 ```
 pip install virtualenv
 pip install venv venv
 source venv/bin/activate
 pip install -r requirements.txt
-python -m [script]
+python -m [script]«
 ```
 
 ## Data Sources
 
 [SPY/SPX Data](https://firstratedata.com/free-intraday-data)
+[USD/CHF Data](https://www.fxdd.com/mt/en/market-data/metatrader-1-minute-data)
+[BTC/ARS & BTC/USDT](https://data.binance.vision/?prefix=data/spot/daily/klines/)
 
-## klines schema
+klines schema for BTC/ARS & BTC/USDT
 ```
 [
   [
@@ -32,5 +37,3 @@ python -m [script]
   ]
 ]
 ```
-
-TODO: Add [TabbyML](https://github.com/TabbyML/tabby?tab=readme-ov-file) to this computer and use it instead of github copilot.
