@@ -10,7 +10,7 @@ pip install virtualenv
 pip install venv venv
 source venv/bin/activate
 pip install -r requirements.txt
-python -m [script]«
+python -m [script]
 ```
 
 ## Data Sources
