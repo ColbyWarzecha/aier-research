@@ -16,7 +16,9 @@ python -m [script]
 ## Data Sources
 
 [SPY/SPX Data](https://firstratedata.com/free-intraday-data)
+
 [USD/CHF Data](https://www.fxdd.com/mt/en/market-data/metatrader-1-minute-data)
+
 [BTC/ARS & BTC/USDT](https://data.binance.vision/?prefix=data/spot/daily/klines/)
 
 klines schema for BTC/ARS & BTC/USDT
