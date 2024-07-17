@@ -1,20 +1,3 @@
-# Combines data in ./data/BTCARS, ./data/BTCUSDT, and ./data/USDCHF into a single csv called "consolidated_data.csv" in /data
-
-# Schemas of BTCARS and BTCUSDT
-# data = pd.read_csv(master_csv, header=None, names=[
-#         "Open Time", "Open", "High", "Low", "Close", "Volume", "Close Time",
-#         "Base Asset Volume", "Number of Trades", "Taker Buy Volume",
-#         "Taker Buy Base Asset Volume", "Ignore"
-#     ])
-# Here's an example line:
-# 1702166400000,43713.59,43726.02,43713.59,43726.01,22.37177,1702166459999,978036.4943534,923,13.14171,574521.97501,0
-
-# Now I need this to be combined with the USDCHF data. Here's the schema:
-# time,open,high,low,close,volume
-# 1672617000000,0.92452,0.92452,0.92452,0.92452,1.0
-
-# Finally, put all of these into the same csv
-
 import pandas as pd
 import os
 

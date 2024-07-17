@@ -1,12 +1,8 @@
 import statsmodels.formula.api as smf
 import pandas as pd
 from datetime import timedelta
-
-# Step 1: Load and prepare the data
-def load_data():
-    df = pd.read_csv('./data/consolidated_data.csv')
-    df['Open Time'] = pd.to_datetime(df['Open Time'])
-    return df
+import matplotlib.pyplot as plt
+from utils import load_data
 
 # Step 2: Calculate returns
 def calculate_returns(df):
@@ -16,8 +12,8 @@ def calculate_returns(df):
 
 # Step 3: Prepare data for DiD model
 def prepare_did_data(df, event_timestamp):
-    start_time = event_timestamp - timedelta(days=3)
-    end_time = event_timestamp + timedelta(days=3)
+    start_time = event_timestamp - timedelta(days=2)
+    end_time = event_timestamp + timedelta(days=2)
     
     df_window = df[(df['Open Time'] >= start_time) & (df['Open Time'] <= end_time)]
     
@@ -26,7 +22,7 @@ def prepare_did_data(df, event_timestamp):
                       id_vars=['Open Time'], 
                       value_vars=['BTCARS_return', 'BTCUSDT_return', 'USDCHF_return'],
                       var_name='asset', 
-                      value_name='return_value')  # Changed 'return' to 'return_value'
+                      value_name='return_value')
     
     df_long['post'] = (df_long['Open Time'] > event_timestamp).astype(int)
     df_long['treatment_btcars'] = (df_long['asset'] == 'BTCARS_return').astype(int)
@@ -39,6 +35,20 @@ def run_did_model(df, treatment_var):
     formula = f'return_value ~ treatment_{treatment_var} + post + treatment_{treatment_var}:post'
     model = smf.ols(formula=formula, data=df).fit()
     return model
+
+def visualize_results(df_did, event_timestamp):
+    # Time series plot of returns
+    plt.figure(figsize=(12, 6))
+    for asset in ['BTCARS_return', 'BTCUSDT_return', 'USDCHF_return']:
+        data = df_did[df_did['asset'] == asset]
+        plt.plot(data['Open Time'], data['return_value'], label=asset)
+    plt.axvline(event_timestamp, color='r', linestyle='--', label='Event')
+    plt.title('Asset Returns Around the Event')
+    plt.xlabel('Time')
+    plt.ylabel('Return')
+    plt.legend()
+    plt.tight_layout()
+    plt.show()
 
 # Main execution
 if __name__ == "__main__":
@@ -69,3 +79,6 @@ if __name__ == "__main__":
     
     print(f"\nBTCARS DiD Estimator: {did_btcars}")
     print(f"BTCUSDT DiD Estimator: {did_btcusdt}")
+
+    # Visualize time series
+    visualize_results(df_did, event_timestamp)

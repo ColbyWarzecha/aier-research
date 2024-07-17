@@ -1,7 +1,7 @@
 # README
 
 Example Run
-python -m src.visualize --currency USDCHF --start 2023-08-10 --end 2023-08-16
+python -m src.visualize --currency BTCUSDT --event-date 2023-08-13 --time-window 5
 
 Macnoob setup
 
@@ -15,11 +15,11 @@ python -m [script]
 
 ## Data Sources
 
-[SPY/SPX Data](https://firstratedata.com/free-intraday-data)
+- [SPY/SPX Data](https://firstratedata.com/free-intraday-data)
 
-[USD/CHF Data](https://www.fxdd.com/mt/en/market-data/metatrader-1-minute-data)
+- [USD/CHF Data](https://www.fxdd.com/mt/en/market-data/metatrader-1-minute-data)
 
-[BTC/ARS & BTC/USDT](https://data.binance.vision/?prefix=data/spot/daily/klines/)
+- [BTC/ARS & BTC/USDT](https://data.binance.vision/?prefix=data/spot/daily/klines/)
 
 klines schema for BTC/ARS & BTC/USDT
 

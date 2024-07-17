@@ -5,6 +5,7 @@ from datetime import datetime, timedelta
 from zipfile import ZipFile
 import pandas as pd
 import yaml
+from src.utils import load_config
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
@@ -83,19 +84,6 @@ def combine_csv_files(data_folder: str, master_csv: str) -> None:
         logging.info(f"Master CSV created: {master_csv}")
     else:
         logging.warning("No CSV files found to combine.")
-
-def load_config(config_file: str) -> dict:
-    """
-    Loads configuration from a YAML file.
-
-    Args:
-        config_file (str): The path to the configuration file.
-
-    Returns:
-        dict: Configuration dictionary.
-    """
-    with open(config_file, 'r') as file:
-        return yaml.safe_load(file)
 
 def main() -> None:
     """
