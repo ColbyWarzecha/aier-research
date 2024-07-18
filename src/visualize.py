@@ -3,7 +3,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import argparse
 from datetime import timezone, timedelta
-from utils import load_config
+from src.utils import load_config
 import os
 
 def visualize_data(master_csv: str, notable_events: dict, currency_pair: str, event_date: str, time_window: int, show: bool = False) -> None:
