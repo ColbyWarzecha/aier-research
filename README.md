@@ -4,10 +4,11 @@ Example Run
 python -m src.visualize --currency BTCUSDT --event-date 2023-08-13 --time-window 5
 
 Macnoob setup
+test
 
 ``` bash
 pip install virtualenv
-pip install venv venv
+virtualenv venv
 source venv/bin/activate
 pip install -r requirements.txt
 python -m [script]
