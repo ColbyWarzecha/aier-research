@@ -1,7 +1,7 @@
 # README
 
 Example Run
-python -m src.visualize --currency BTCUSDT --event-date 2023-08-13 --time-window 5
+python -m src.maga --currency BTCUSDT --event-date 2023-08-13 --time-window 2 --config config.yaml --show-plots
 
 Macnoob setup
 test

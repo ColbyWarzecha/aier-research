@@ -1,0 +1,62 @@
+
+Analysis for event: Event on 2023-08-13 at 2023-08-13 00:00:00
+
+BTCUSDT DiD Model Results:
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:           return_value   R-squared:                       0.000
+Model:                            OLS   Adj. R-squared:                 -0.000
+Method:                 Least Squares   F-statistic:                    0.9712
+Date:                Fri, 19 Jul 2024   Prob (F-statistic):              0.405
+Time:                        12:27:49   Log-Likelihood:                 64357.
+No. Observations:               11522   AIC:                        -1.287e+05
+Df Residuals:                   11518   BIC:                        -1.287e+05
+Df Model:                           3                                         
+Covariance Type:            nonrobust                                         
+==========================================================================================
+                             coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------------------
+Intercept              -1.257e-06   1.69e-05     -0.074      0.941   -3.44e-05    3.19e-05
+treatment_btcusdt        1.63e-18   2.39e-05   6.81e-14      1.000   -4.69e-05    4.69e-05
+post                    2.888e-05   2.39e-05      1.207      0.227    -1.8e-05    7.58e-05
+treatment_btcusdt:post -2.269e-18   3.38e-05  -6.71e-14      1.000   -6.63e-05    6.63e-05
+==============================================================================
+Omnibus:                    36171.242   Durbin-Watson:                   2.485
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):       5362184636.154
+Skew:                          49.416   Prob(JB):                         0.00
+Kurtosis:                    3343.585   Cond. No.                         6.85
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+BTCUSDT DiD Estimator: -2.2694078282028616e-18
+
+USDCHF DiD Model Results:
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:           return_value   R-squared:                       0.000
+Model:                            OLS   Adj. R-squared:                 -0.000
+Method:                 Least Squares   F-statistic:                    0.9712
+Date:                Fri, 19 Jul 2024   Prob (F-statistic):              0.405
+Time:                        12:27:49   Log-Likelihood:                 64357.
+No. Observations:               11522   AIC:                        -1.287e+05
+Df Residuals:                   11518   BIC:                        -1.287e+05
+Df Model:                           3                                         
+Covariance Type:            nonrobust                                         
+=========================================================================================
+                            coef    std err          t      P>|t|      [0.025      0.975]
+-----------------------------------------------------------------------------------------
+Intercept             -1.257e-06   1.69e-05     -0.074      0.941   -3.44e-05    3.19e-05
+treatment_usdchf       9.022e-19   2.39e-05   3.77e-14      1.000   -4.69e-05    4.69e-05
+post                   2.888e-05   2.39e-05      1.207      0.227    -1.8e-05    7.58e-05
+treatment_usdchf:post -2.117e-18   3.38e-05  -6.26e-14      1.000   -6.63e-05    6.63e-05
+==============================================================================
+Omnibus:                    36171.242   Durbin-Watson:                   2.485
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):       5362184636.154
+Skew:                          49.416   Prob(JB):                         0.00
+Kurtosis:                    3343.585   Cond. No.                         6.85
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+USDCHF DiD Estimator: -2.1165210954098453e-18
