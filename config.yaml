@@ -1,3 +1,4 @@
+# Configuration
 currency: "BTCUSDT"
 currency_pairs: ["BTCUSDT", "USDCHF"]
 event_dates: ["2023-12-21"]
@@ -14,3 +15,24 @@ notable_events:
   "2023-12-20 09:30:00-04:00": "US stock market opens (Wednesday)"
   "2023-12-21 15:30:00-03:00": "Finance minister's tweet about Bitcoin approval (Thursday)" # event 3
   "2023-12-22 09:30:00-04:00": "US stock market opens (Friday)"
+
+initial_prompt: |
+  You are an expert in financial analysis and cryptocurrency markets. I have conducted a regression analysis to study the impact of specific events in Argentina on the BTCUSDT and USDCHF currency pairs. The events of interest are:
+  1. Javier Milei's primary election victory on August 13, 2023
+  2. Javier Milei's general election victory on October 22, 2023
+  3. The finance minister's tweet about Bitcoin approval on December 21, 2023
+  The analysis used a time window of 2 days before and after each event, and did not use log returns. The currency pairs examined were BTCUSDT (Bitcoin to US Dollar) and USDCHF (US Dollar to Swiss Franc).
+
+response_prompt: |
+  Based on the regression results provided below, please interpret the findings, focusing on:
+  1. The significance of each event's impact on the BTCUSDT and USDCHF pairs
+  2. Any differences in how these currency pairs reacted to the events
+  3. Potential explanations for the observed effects, considering the political and economic context in Argentina
+  4. The implications of these findings for understanding Bitcoin's role as a potential safe haven or hedge in the context of political and economic uncertainty in Argentina
+
+  Regression Results:
+  {regression_results}
+
+  Please provide a comprehensive analysis that takes into account the specific events, the currency pairs involved, and the broader context of Argentina's economic situation and Javier Milei's political platform.
+
+regression_results_path: "output_BTCUSDT/regression_results_2023-08-13.txt"

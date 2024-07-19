@@ -74,7 +74,7 @@ def visualize_data(
     plt.legend(bbox_to_anchor=(1.05, 1), loc="upper left")
     plt.grid(True)
     plt.xticks(rotation=45)
-    
+
     # Manually adjust layout
     plt.subplots_adjust(left=0.1, right=0.9, top=0.9, bottom=0.1)
     plt.tight_layout()

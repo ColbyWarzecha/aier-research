@@ -1,44 +1,64 @@
-# README
+# Cryptocurrency Market Analysis Tool
 
-Example Run
-python -m src.maga --currency BTCUSDT --event-date 2023-08-13 --time-window 2 --config config.yaml --show-plots
+This project analyzes the impact of specific political events in Argentina on cryptocurrency markets, particularly focusing on Bitcoin (BTC) and its relationship with traditional currencies like the US Dollar (USD) and Swiss Franc (CHF).
 
-Macnoob setup
-test
+## Table of Contents
 
-``` bash
-pip install virtualenv
-virtualenv venv
-source venv/bin/activate
-pip install -r requirements.txt
-python -m [script]
-```
+- [Cryptocurrency Market Analysis Tool](#cryptocurrency-market-analysis-tool)
+  - [Table of Contents](#table-of-contents)
+  - [Features](#features)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Data Sources](#data-sources)
+  - [Contributing](#contributing)
+
+## Features
+
+- Regression analysis of BTC/USD and USD/CHF pairs around key Argentine political events
+- Time window analysis for event impact assessment
+- Configurable parameters for currency pairs, event dates, and analysis settings
+- Integration with Claude AI for result interpretation
+
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/crypto-market-analysis.git
+   cd aier-research
+   ```
+
+2. Set up a virtual environment:
+   ```bash
+   pip install virtualenv
+   virtualenv venv
+   source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+   ```
+
+3. Install the required packages:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+## Usage
+
+1. Configure your analysis parameters in `config.yaml`.
+
+2. Run the main regression script:
+   ```bash
+   python -m src.regress
+   ```
+
+3. For AI interpretation of results, use:
+   ```bash
+   python -m src.interpret_results
+   ```
 
 ## Data Sources
 
-- [SPY/SPX Data](https://firstratedata.com/free-intraday-data)
+- **SPY/SPX Data**: [FirstRateData](https://firstratedata.com/free-intraday-data)
+- **USD/CHF Data**: [FXDD](https://www.fxdd.com/mt/en/market-data/metatrader-1-minute-data)
+- **BTC/ARS & BTC/USDT**: [Binance Vision](https://data.binance.vision/?prefix=data/spot/daily/klines/)
 
-- [USD/CHF Data](https://www.fxdd.com/mt/en/market-data/metatrader-1-minute-data)
+## Contributing
 
-- [BTC/ARS & BTC/USDT](https://data.binance.vision/?prefix=data/spot/daily/klines/)
-
-klines schema for BTC/ARS & BTC/USDT
-
-``` text
-[
-  [
-    1591258320000,          // Open time
-    "9640.7",               // Open
-    "9642.4",               // High
-    "9640.6",               // Low
-    "9642.0",               // Close (or latest price)
-    "206",                  // Volume
-    1591258379999,          // Close time
-    "2.13660389",           // Base asset volume
-    48,                     // Number of trades
-    "119",                  // Taker buy volume
-    "1.23424865",           // Taker buy base asset volume
-    "0"                     // Ignore.
-  ]
-]
-```
+Contributions are welcome! Please feel free to submit a Pull Request.
