@@ -57,6 +57,7 @@ This project analyzes the impact of specific political events in Argentina on cr
 
 - **SPY/SPX Data**: [FirstRateData](https://firstratedata.com/free-intraday-data)
 - **USD/CHF Data**: [FXDD](https://www.fxdd.com/mt/en/market-data/metatrader-1-minute-data)
+  - Note: On weekends, data are only given for one minute representing the full day (while the FX markets are closed).
 - **BTC/ARS & BTC/USDT**: [Binance Vision](https://data.binance.vision/?prefix=data/spot/daily/klines/)
 
 ## Contributing

@@ -18,9 +18,9 @@ def load_and_process_data(directory):
 
 def main():
     # Load BTC/ARS data
-    btcars_df = load_and_process_data('./data/BTCARS')
-    btcars_df = btcars_df.add_suffix('_BTCARS')
-    btcars_df = btcars_df.rename(columns={'Open Time_BTCARS': 'Open Time'})
+    # btcars_df = load_and_process_data('./data/BTCARS')
+    # btcars_df = btcars_df.add_suffix('_BTCARS')
+    # btcars_df = btcars_df.rename(columns={'Open Time_BTCARS': 'Open Time'})
 
     # Load BTC/USDT data
     btcusdt_df = load_and_process_data('./data/BTCUSDT')
@@ -33,14 +33,14 @@ def main():
     usdchf_df = usdchf_df.rename(columns={'Open Time_USDCHF': 'Open Time'})
 
     # Merge all dataframes
-    merged_df = pd.merge(btcars_df, btcusdt_df, on='Open Time', how='outer')
-    merged_df = pd.merge(merged_df, usdchf_df, on='Open Time', how='outer')
+    # merged_df = pd.merge(btcars_df, btcusdt_df, on='Open Time', how='outer')
+    merged_df = pd.merge(btcusdt_df, usdchf_df, on='Open Time', how='inner')
 
     # Sort by timestamp
     merged_df = merged_df.sort_values('Open Time')
 
     # Save to CSV
-    output_path = './data/consolidated_data.csv'
+    output_path = './data/consolidated_data2.csv'
     merged_df.to_csv(output_path, index=False)
     print(f"Consolidated data saved to {output_path}")
 

@@ -155,7 +155,7 @@ def run_did_model(df: pd.DataFrame, treatment_var: str) -> RegressionResultsWrap
     return smf.ols(formula=formula, data=df).fit()
 
 def visualize_did_results(df_did: pd.DataFrame, event_timestamp: pd.Timestamp, event_name: str,
-                          output_folder: str, use_log_returns: bool = True) -> None:
+                          output_folder: str, use_log_returns: bool = False) -> None:
     """
     Visualize the results of the Difference-in-Differences analysis.
 
@@ -251,7 +251,7 @@ def main(config_path: str) -> None:
 
         event_timestamp = pd.to_datetime(event_date)
         analyze_event(df, event_timestamp, f"Event on {event_date}", config,
-                      output_folder, config.get("use_log_returns", True))
+                      output_folder, config.get("use_log_returns"))
 
 if __name__ == "__main__":
     config_path = "config.yaml"

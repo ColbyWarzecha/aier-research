@@ -2,7 +2,7 @@
 currency: "BTCUSDT"
 currency_pairs: ["BTCUSDT", "USDCHF"]
 event_dates: ["2023-12-21"]
-time_window: 5
+time_window: 2
 use_log_returns: false
 show_plots: false
 notable_events:
