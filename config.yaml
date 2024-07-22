@@ -2,7 +2,7 @@
 currency: "BTCUSDT"
 currency_pairs: ["BTCUSDT", "USDCHF"]
 event_dates: ["2023-12-21"]
-time_window: 2
+time_window: 5
 use_log_returns: false
 show_plots: false
 notable_events:
@@ -35,4 +35,4 @@ response_prompt: |
 
   Please provide a comprehensive analysis that takes into account the specific events, the currency pairs involved, and the broader context of Argentina's economic situation and Javier Milei's political platform.
 
-regression_results_path: "output_BTCUSDT/regression_results_2023-08-13.txt"
+regression_results_path: "output_BTCUSDT/regression_results_2023-12-21.txt"

@@ -1,8 +1,10 @@
-import anthropic
+import src.interpret_results as interpret_results
 import os
 from pprint import pprint
 from typing import Dict, Any
 from src.utils import load_config
+from dotenv import load_dotenv
+from anthropic import Anthropic
 
 def read_regression_results(file_path: str) -> str:
     try:
@@ -13,7 +15,7 @@ def read_regression_results(file_path: str) -> str:
         return "Regression results not available."
 
 def connect_to_claude(api_key: str, initial_prompt: str, response_prompt: str) -> str:
-    client = anthropic.Anthropic(api_key=api_key)
+    client = interpret_results.Anthropic(api_key=api_key)
     messages = [
         {"role": "user", "content": initial_prompt},
         {"role": "assistant", "content": "Here is my analysis based on the provided information:"},
@@ -29,6 +31,7 @@ def connect_to_claude(api_key: str, initial_prompt: str, response_prompt: str) -
     return message.content
 
 def main():
+    load_dotenv()
     api_key = os.getenv("ANTHROPIC_API_KEY")
     if not api_key:
         raise ValueError("ANTHROPIC_API_KEY environment variable not set")
@@ -37,7 +40,8 @@ def main():
     config: Dict[str, Any] = {k: v for k, v in data.items() if k not in ['initial_prompt', 'response_prompt', 'regression_results_path']}
     initial_prompt: str = data.get('initial_prompt', '')
     response_prompt_template: str = data.get('response_prompt', '')
-    regression_results_path: str = data.get('regression_results_path', 'output_BTCUSDT/output_BTCUSDT/regression_results_2023-08-13.txt')
+    regression_results_path: str = data.get('regression_results_path', './output_BTCUSDT/regression_results_2023-12-21.txt')
+    # TODO: Fix this prompt to work on only whatever regressions I make.
 
     # Read regression results
     regression_results = read_regression_results(regression_results_path)
@@ -52,4 +56,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-    print("Ella says hi")

@@ -97,6 +97,19 @@ def visualize_data(
 def prepare_did_data(
     df, event_timestamp, currency_pairs, use_log_returns=True, window_days=2
 ):
+    """
+    Prepares data for Difference-in-Differences (DiD) analysis.
+
+    Parameters:
+    df (pd.DataFrame): The input dataframe containing the data.
+    event_timestamp (pd.Timestamp): The timestamp of the event.
+    currency_pairs (list): List of currency pairs to analyze.
+    use_log_returns (bool): Whether to use log returns or simple returns. Default is True.
+    window_days (int): Number of days before and after the event to include in the analysis. Default is 2.
+
+    Returns:
+    pd.DataFrame: A long-format dataframe suitable for DiD analysis.
+    """
     if event_timestamp.tzinfo is None:
         event_timestamp = event_timestamp.tz_localize("UTC")
     else:
