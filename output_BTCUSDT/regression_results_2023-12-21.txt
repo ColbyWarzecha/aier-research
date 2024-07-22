@@ -8,7 +8,7 @@ Dep. Variable:           return_value   R-squared:                       0.000
 Model:                            OLS   Adj. R-squared:                 -0.000
 Method:                 Least Squares   F-statistic:                   0.01037
 Date:                Mon, 22 Jul 2024   Prob (F-statistic):              0.999
-Time:                        10:40:28   Log-Likelihood:                 94470.
+Time:                        10:50:48   Log-Likelihood:                 94470.
 No. Observations:               28802   AIC:                        -1.889e+05
 Df Residuals:                   28798   BIC:                        -1.889e+05
 Df Model:                           3                                         
@@ -38,7 +38,7 @@ Dep. Variable:           return_value   R-squared:                       0.000
 Model:                            OLS   Adj. R-squared:                 -0.000
 Method:                 Least Squares   F-statistic:                   0.01037
 Date:                Mon, 22 Jul 2024   Prob (F-statistic):              0.999
-Time:                        10:40:28   Log-Likelihood:                 94470.
+Time:                        10:50:48   Log-Likelihood:                 94470.
 No. Observations:               28802   AIC:                        -1.889e+05
 Df Residuals:                   28798   BIC:                        -1.889e+05
 Df Model:                           3                                         
