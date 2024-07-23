@@ -53,6 +53,11 @@ This project analyzes the impact of specific political events in Argentina on cr
    python -m src.interpret_results
    ```
 
+4. For visualizing the data, use:
+   ```bash
+   python -m src.visualize --event-date 2023-11-19 --time-window 2
+   ```
+
 ## Data Sources
 
 - **SPY/SPX Data**: [FirstRateData](https://firstratedata.com/free-intraday-data)

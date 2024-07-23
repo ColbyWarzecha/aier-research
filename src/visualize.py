@@ -98,7 +98,8 @@ def main() -> None:
     parser.add_argument(
         "--currency",
         type=str,
-        required=True,
+        required=False,
+        default="BTCUSDT",
         help="The currency pair you wish to visualize",
     )
     parser.add_argument(
