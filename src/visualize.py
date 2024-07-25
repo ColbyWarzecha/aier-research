@@ -7,13 +7,13 @@ from datetime import timezone, timedelta
 from src.utils import load_config
 import os
 
-
 def visualize_data(
     master_csv: str,
     notable_events: dict,
     currency_pair: str,
     event_date: str,
     time_window: int,
+    plot_type: str = "price",
     show: bool = False,
 ) -> None:
     data = pd.read_csv(
@@ -42,7 +42,15 @@ def visualize_data(
     data = data[(data["Open Time"] >= start_date) & (data["Open Time"] <= end_date)]
 
     plt.figure(figsize=(15, 12))  # Increased figure height to accommodate legend
-    sns.lineplot(x=data["Open Time"], y=data["Open"], label="Open", color="blue")
+
+    if plot_type == "price":
+        sns.lineplot(x=data["Open Time"], y=data["Open"], label="Open", color="blue")
+        plt.ylabel("Price")
+    elif plot_type == "volume":
+        sns.lineplot(x=data["Open Time"], y=data["Volume"], label="Volume", color="green")
+        plt.ylabel("Volume")
+    else:
+        raise ValueError("Invalid plot type. Choose either 'price' or 'volume'.")
 
     # Sort events by date
     sorted_events = sorted(notable_events.items(), key=lambda x: pd.to_datetime(x[0]))
@@ -64,7 +72,6 @@ def visualize_data(
 
     plt.title(f"{currency_pair} - {time_window} days before and after {event_date}")
     plt.xlabel("Time")
-    plt.ylabel("Price")
     
     # Move legend to bottom and adjust its appearance
     plt.legend(loc='upper center', bbox_to_anchor=(0.5, -0.15), ncol=3)
@@ -80,7 +87,7 @@ def visualize_data(
 
     output_folder = "./output_images"
     os.makedirs(output_folder, exist_ok=True)
-    filename = f"{currency_pair}_{event_date}_window_{time_window}days.png"
+    filename = f"{currency_pair}_{event_date}_window_{time_window}days_{plot_type}.png"
     filepath = os.path.join(output_folder, filename)
     plt.savefig(filepath, bbox_inches="tight")
     print(f"Image saved as {filepath}")
@@ -88,8 +95,6 @@ def visualize_data(
     if show is True:
         plt.show()
     plt.close()
-
-
 
 def main() -> None:
     parser = argparse.ArgumentParser(
@@ -114,6 +119,13 @@ def main() -> None:
         default=2,
         help="Number of days before and after the event to visualize",
     )
+    parser.add_argument(
+        "--plot-type",
+        type=str,
+        default="price",
+        choices=["price", "volume"],
+        help="The type of data to plot: 'price' or 'volume'",
+    )
     args = parser.parse_args()
 
     config_file = "config.yaml"
@@ -129,8 +141,8 @@ def main() -> None:
         currency_pair,
         args.event_date,
         args.time_window,
+        args.plot_type,
     )
-
 
 if __name__ == "__main__":
     main()

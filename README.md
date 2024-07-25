@@ -1,23 +1,15 @@
 # Cryptocurrency Market Analysis Tool
 
-This project analyzes the impact of specific political events in Argentina on cryptocurrency markets, particularly focusing on Bitcoin (BTC) and its relationship with traditional currencies like the US Dollar (USD) and Swiss Franc (CHF).
+This project analyzes the impact of specific political events in Argentina on cryptocurrency markets, particularly focusing on Bitcoin (BTC).
 
 ## Table of Contents
 
 - [Cryptocurrency Market Analysis Tool](#cryptocurrency-market-analysis-tool)
   - [Table of Contents](#table-of-contents)
-  - [Features](#features)
   - [Installation](#installation)
   - [Usage](#usage)
   - [Data Sources](#data-sources)
-  - [Contributing](#contributing)
 
-## Features
-
-- Regression analysis of BTC/USD and USD/CHF pairs around key Argentine political events
-- Time window analysis for event impact assessment
-- Configurable parameters for currency pairs, event dates, and analysis settings
-- Integration with Claude AI for result interpretation
 
 ## Installation
 
@@ -41,21 +33,9 @@ This project analyzes the impact of specific political events in Argentina on cr
 
 ## Usage
 
-1. Configure your analysis parameters in `config.yaml`.
-
-2. Run the main regression script:
+1. For visualizing the data, use:
    ```bash
-   python -m src.regress
-   ```
-
-3. For AI interpretation of results, use:
-   ```bash
-   python -m src.interpret_results
-   ```
-
-4. For visualizing the data, use:
-   ```bash
-   python -m src.visualize --event-date 2023-11-19 --time-window 2
+   python -m src.visualize --event-date 2023-08-14 --time-window 2 --plot-type price
    ```
 
 ## Data Sources
@@ -64,7 +44,3 @@ This project analyzes the impact of specific political events in Argentina on cr
 - **USD/CHF Data**: [FXDD](https://www.fxdd.com/mt/en/market-data/metatrader-1-minute-data)
   - Note: On weekends, data are only given for one minute representing the full day (while the FX markets are closed).
 - **BTC/ARS & BTC/USDT**: [Binance Vision](https://data.binance.vision/?prefix=data/spot/daily/klines/)
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.

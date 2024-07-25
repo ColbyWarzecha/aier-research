@@ -12,12 +12,11 @@ notable_events:
   "2023-08-13 23:00:00-03:00": "Primary election victory for Javier Milei (Sunday)" # event 1
   "2023-08-14 09:30:00-04:00": "US stock market opens (Monday)"
   "2023-08-18 00:57:00-00:00": "Large Bitcoin Selloffs (Friday)"
-  "2023-10-20 09:30:00-04:00": "US stock market opens (Friday)"
   "2023-10-22 21:00:00-03:00": "Advanced to Second Round of Argentina General Election (Sunday)" # event 2
   "2023-10-23 09:30:00-04:00": "US stock market opens (Monday)"
   "2023-11-19 11:00:00-00:00": "Polls open for Argentina general election second round (Sunday)"
   "2023-11-19 20:00:00-00:00": "Polls close for Argentina general election second round (Sunday)"
-  "2023-11-20 01:10:00-00:00": "Javier Milei declared winner of second round election (Monday)"
+  "2023-11-20 01:10:00-00:00": "Javier Milei declared winner of second round election (Monday)" # event 3
   "2023-12-20 09:30:00-04:00": "US stock market opens (Wednesday)"
-  "2023-12-21 15:30:00-03:00": "Finance minister's tweet about Bitcoin approval (Thursday)" # event 3
+  "2023-12-21 15:30:00-03:00": "Finance minister's tweet about Bitcoin approval (Thursday)" # event 4
   "2023-12-22 09:30:00-04:00": "US stock market opens (Friday)"
