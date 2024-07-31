@@ -1,0 +1,19 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: AIER REsearch
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Colby
+    family-names: Warzecha
+    email: colby.warzecha@gmail.com
+repository-code: 'https://github.com/ColbyWarzecha/aier-research'
+abstract: >-
+  This project analyzes the impact of specific political
+  events in Argentina on cryptocurrency markets,
+  particularly focusing on Bitcoin (BTC).
+license: MIT
