@@ -14,11 +14,6 @@ This project analyzes the impact of specific political events in Argentina on cr
 ## Installation
 
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/crypto-market-analysis.git
-   cd aier-research
-   ```
-
 2. Set up a virtual environment:
    ```bash
    pip install virtualenv
