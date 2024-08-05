@@ -1,6 +1,6 @@
 # Cryptocurrency Market Analysis Tool
 
-This project analyzes the impact of specific political events in Argentina on cryptocurrency markets, particularly focusing on Bitcoin (BTC).
+This project analyzes the impact of specific political events in Argentina on cryptocurrency markets, particularly focusing on Bitcoin (BTCUSDT).
 
 ## Table of Contents
 
